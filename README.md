@@ -36,12 +36,12 @@ composer update
 
 From command line:
 ```
-bin/cake plugin load crabstudio/authenticate
+bin/cake plugin load Authenticate
 ```
 
 Or add this line to the end of file **Your_project\config\bootstrap.php**
 ```
-Plugin::load('Crabstudio/Authenticate');
+Plugin::load('Authenticate');
 ```
 
 ## Configure
@@ -53,7 +53,7 @@ Config Auth component from **AppController.php**
 
 $this->loadComponent('Auth', [
     'authenticate' => [
-        'Advance' => [
+        'Authenticate.Advance' => [
 	        'lockout' => [
 	            'retries' => 3,
 	            'expires' => '5 minutes',
