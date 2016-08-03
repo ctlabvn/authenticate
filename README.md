@@ -73,11 +73,24 @@ $this->loadComponent('Auth', [
     ]);
 ```
 
-If you want to store login information to the Cookie, login Form required `checkbox` RememberMe.
+If you want to store login information to the Cookie, login Form required `checkbox` RememberMe as bellow
+```
+// login.ctp template
+
+<?=$this->Form->create()?>
+<?=$this->Flash->render()?>
+<?=$this->Flash->render('auth')?>
+<?=$this->Form->input('username')?>
+<?=$this->Form->input('password')?>
+<?=$this->Form->input('RememberMe', ['checked' => false, 'type' => 'checkbox'])?>
+<?=$this->Form->input(__('Login'), ['type' => 'submit'])?>
+<?=$this->Form->end()?>
+```
 
 Then paste this function to the **AppController.php**
 
 ```
+// remember to import Event to the AppController.php
 use Cake\Event\Event;
 
 public function beforeFilter(Event $event)
