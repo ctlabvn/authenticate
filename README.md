@@ -3,7 +3,7 @@
 ## Feature
 
 - Prevent brute force attack by IP
-- Remember login information
+- Remember/Auto login
 
 ## Installation
 
@@ -45,16 +45,12 @@ Plugin::load('Crabstudio/Authenticate');
 
 Config Auth component from **AppController.php**
 ```
+// All config key as usual FormAuthenticate/BaseAuthenticate
+// I list the different config keys only.
+
 $this->loadComponent('Auth', [
     'authenticate' => [
         'Advance' => [
-            'fields' => [
-                'username' => 'username',
-                'password' => 'password',
-            ],
-            'scope' => [
-            	'flag' => 'ACTIVE'
-            ],
 	        'lockout' => [
 	            'retries' => 3,
 	            'expires' => '5 minutes',
@@ -79,7 +75,6 @@ If you want to store login information to the Cookie, login Form required `check
 
 <?=$this->Form->create()?>
 <?=$this->Flash->render()?>
-<?=$this->Flash->render('auth')?>
 <?=$this->Form->input('username')?>
 <?=$this->Form->input('password')?>
 <?=$this->Form->input('RememberMe', ['checked' => false, 'type' => 'checkbox'])?>
