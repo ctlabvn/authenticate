@@ -74,3 +74,22 @@ $this->loadComponent('Auth', [
 ```
 
 If you want to store login information to the Cookie, login Form required `checkbox` RememberMe.
+
+Then paste this function to the **AppController.php**
+
+```
+use Cake\Event\Event;
+
+public function beforeFilter(Event $event)
+{
+    //Automaticaly Login.
+    if (!$this->Auth->user() && $this->Cookie->read('RememberMe')) {
+        $user = $this->Auth->identify();
+        if ($user) {
+            $this->Auth->setUser($user);
+        } else {
+            $this->Cookie->delete('RememberMe');
+        }
+    }
+}
+```

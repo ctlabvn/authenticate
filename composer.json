@@ -10,7 +10,7 @@
         "authenticate",
         "crabstudio",
         "anhtuank7c",
-        "Prevent brute force attack",
+        "Prevent brute force attack"
     ],
     "suggest": {
         "crabstudio/recaptcha": "Simple google recaptcha for CakePHP 3.x",
