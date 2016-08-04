@@ -72,6 +72,7 @@ class AdvanceAuthenticate extends BaseAuthenticate
         if ($this->_preventBruteForceAttack($request)) {
             $message = __($this->_config['lockout']['message']['locked'], $this->_config['lockout']['expires']);
             $this->_pushError($message);
+
             return false;
         }
 
@@ -167,6 +168,7 @@ class AdvanceAuthenticate extends BaseAuthenticate
         if (!$this->_config['remember']['enable']) {
             return null;
         }
+
         return $this->_registry->Cookie->read($this->_config['remember']['key']);
     }
 
@@ -219,6 +221,7 @@ class AdvanceAuthenticate extends BaseAuthenticate
         $lastModified = Time::createFromTimestamp($lastModified);
         if (!$lastModified->wasWithinLast($this->_config['lockout']['expires'])) {
             unlink($filePath);
+
             return false;
         }
         $count = intval(file_get_contents($filePath));
