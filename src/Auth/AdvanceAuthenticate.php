@@ -269,20 +269,6 @@ class AdvanceAuthenticate extends BaseAuthenticate
      */
     protected function _removeExpiredLock()
     {
-        // $filePath = CONFIG . $this->_config['lockout']['file_path'];
-        // if (!file_exists($filePath)) {
-        //     mkdir($filePath, 0777);
-        // }
-        // $files = scandir($filePath);
-        // foreach ($files as $k => $file) {
-        //     $lastModified = filemtime($filePath . DS . $file);
-        //     $lastModified = Time::createFromTimestamp($lastModified);
-        //     if ($lastModified->wasWithinLast($this->_config['lockout']['expires'])) {
-        //         continue;
-        //     }
-        //     chown($filePath . DS . $file, 0777);
-        //     unlink($filePath . DS . $file);
-        // }
         $dir = new Folder(CONFIG . $this->_config['lockout']['file_path'], true);
         $files = $dir->find();
         foreach ($files as $fileName) {
