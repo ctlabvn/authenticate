@@ -32,6 +32,10 @@ class AdvanceAuthenticate extends BaseAuthenticate
             'key' => 'RememberMe',
             'expires' => '1 months',
         ],
+        'fields' => [
+            'username' => 'username',
+            'password' => 'password'
+        ],
         'userModel' => 'Users',
         'scope' => [],
         'finder' => 'all',

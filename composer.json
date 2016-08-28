@@ -1,6 +1,6 @@
 {
     "name": "crabstudio/authenticate",
-    "description": "Advance Authenticate plugin for CakePHP 3.x",
+    "description": "Advance Authenticate plugin for CakePHP 3.2+",
     "type": "cakephp-plugin",
     "homepage": "https://github.com/crabstudio/authenticate",
     "license": "MIT",
@@ -13,7 +13,7 @@
         "Prevent brute force attack"
     ],
     "suggest": {
-        "crabstudio/recaptcha": "Simple google recaptcha for CakePHP 3.x",
+        "crabstudio/recaptcha": "Simple google recaptcha for CakePHP 3.2+",
         "crabstudio/bao-kim": "BaoKim payment gateway plugin for CakePHP 3.x",
         "cakephp/cakephp-codesniffer": "Allows to check the code against the coding standards used in CakePHP."
     },
@@ -24,8 +24,8 @@
         "homepage": "http://crabstudio.info"
     }],
     "require": {
-        "php": ">=5.4.16",
-        "cakephp/cakephp": "~3.0"
+        "php": ">=5.6",
+        "cakephp/cakephp": "~3.2"
     },
     "require-dev": {
         "phpunit/phpunit": "*"
