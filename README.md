@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/crabstudio/authenticate.svg?branch=master)](https://travis-ci.org/crabstudio/authenticate) [![Latest Stable Version](https://poser.pugx.org/crabstudio/authenticate/v/stable)](https://packagist.org/packages/crabstudio/authenticate) [![Total Downloads](https://poser.pugx.org/crabstudio/authenticate/downloads)](https://packagist.org/packages/crabstudio/authenticate) [![License](https://poser.pugx.org/crabstudio/authenticate/license)](https://packagist.org/packages/crabstudio/authenticate) [![Latest Unstable Version](https://poser.pugx.org/crabstudio/authenticate/v/unstable)](https://packagist.org/packages/crabstudio/authenticate)
-# Advance Authenticate plugin for CakePHP 3.x
+# Advance Authenticate plugin for CakePHP 3.2+
 
 ## Support me [![paypal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=anhtuank7c%40hotmail%2ecom&lc=US&item_name=Crabstudio%20CakePHP%203%20%2d%20FlatAdmin%20Skeleton&item_number=crabstudio%2dcakephp%2dskeleton&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest)
 
